@@ -1,0 +1,39 @@
+{
+  "name": "ecma-next",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "Mikhail Kolesnikov <dadyaaya@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/plugin-proposal-pipeline-operator": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "ava": "^3.13.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ],
+    "babel": true
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      ["@babel/plugin-proposal-pipeline-operator", { "proposal": "minimal" }]
+    ]
+  }
+}
